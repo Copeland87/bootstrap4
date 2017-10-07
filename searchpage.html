@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Topics Search</title>
+
+    <!-- metas -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- BootStrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Darkly BootSwatch CDN -->
+    <link rel="stylesheet" href="https://bootswatch.com/darkly/bootstrap.min.css">
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+
+    <!-- BootStrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.18.1/moment.min.js"></script>
+
+    <!-- CSS Link -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+  <!-- Nav Bar -->
+
+  <nav class="navbar navbar-default">
+
+  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainnavi">
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+    <span class="icon-bar"></span>
+  </button>
+
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="index.html">Name of Project</a>
+      </div>
+      <div class="collapse navbar-collapse" id="mainnavi">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="">Trending</a></li>
+          <li><a href="searchpage.html">Search</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">User Profile</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Body -->
+
+<h2 class="text-center">Search A Topic</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  <li><a href="#">Abortion</a></li>
+  <li><a href="#">ACLU</a></li>
+  <li><a href="#">Alternative Energy</a></li>
+  <li><a href="#">Animal Testing</a></li>
+  <li><a href="#">Cell Phones</a></li>
+  <li><a href="#">Concealed Guns</a></li>
+  <li><a href="#">Death Penalty</a></li>
+  <li><a href="#">Drinking Age</a></li>
+  <li><a href="#">Health Care</a></li>
+  <li><a href="#">Vaccinations ... please vaccinate your kids</a></li>
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+
+</body>
+</html>
