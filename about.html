@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Topics Search</title>
-
+	<title> About </title>
     <!-- metas -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -47,7 +46,7 @@
       </div>
       <div class="collapse navbar-collapse" id="mainnavi">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="trend.html">Trending</a></li>
+          <li><a href="trending.html">Trending</a></li>
           <li><a href="searchpage.html">Search</a></li>
           <li><a href="create.html">Creat A Nuance</a></li>
           <li><a href="about.html">About</a></li>
@@ -56,46 +55,12 @@
       </div>
     </div>
   </nav>
+  
+<!-- main page -->
 
-  <!-- Main Body -->
-
-<h2 class="pageTitle text-center">Find Your Nuance</h2>
-
+<h2 class="pageTitle text-center">About Nuance</h2>
 <br>
-
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
-
-<ul id="myUL">
-  <li><a href="#">Abortion</a></li>
-  <li><a href="#">ACLU</a></li>
-  <li><a href="#">Alternative Energy</a></li>
-  <li><a href="#">Animal Testing</a></li>
-  <li><a href="#">Cell Phones</a></li>
-  <li><a href="#">Concealed Guns</a></li>
-  <li><a href="#">Death Penalty</a></li>
-  <li><a href="#">Drinking Age</a></li>
-  <li><a href="#">Health Care</a></li>
-  <li><a href="#">Vaccinations ... please vaccinate your kids</a></li>
-</ul>
-
-<script>
-function myFunction() {
-    var input, filter, ul, li, a, i;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName("li");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-
-        }
-    }
-}
-</script>
+<p class="text-center">Information about Nuance and it's creation here.</p>
 
 </body>
 </html>
